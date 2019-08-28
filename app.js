@@ -15,6 +15,7 @@ app.engine('html',require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use(express.static('images'));
+app.use(express.static('css'));
 
 app.get('/', function(request,response){
     //response.render('index.html');
