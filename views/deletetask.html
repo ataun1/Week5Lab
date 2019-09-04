@@ -9,42 +9,21 @@
 
 <body>
     <a href="/" class="btn btn-primary btn-lg">Home</a>
+    <a href="newtask" class="btn btn-primary btn-lg ">Add new Task</a>
     <a href="/listtasks" class="btn btn-primary btn-lg">List All Tasks</a>
-    <a href ="deletetask" class="btn btn-danger  btn-lg">Delete Task</a>
     <a href ="updatetask" class="btn btn-success btn-lg ">Update Task</a>
     <a href ="inserttask" class="btn btn-info btn-lg">Insert Task</a>
-    <form method="POST" action="/task">
+    <form method="POST" action="/deleteAll">
+        <button type="submit" class="btn btn-primary btn-lg">Delete All Completed Tasks</button>
+    </form>
+    <form method="POST" action="/deletebyID">
         <div class="form-group">
-            <label>Task Name</label>
-            <input type="text" class="form-control" name="taskname">
-        </div>
-        <div class="form-group">
-            <label>Assigned to</label>
-            <input type="text" class="form-control" name="assignto">
-        </div>
-        <div class="form-group">
-            <label>Task Due</label>
-            <input type="date" class="form-control" name="taskdue">
-        </div>
-        <label>Task Status</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="status" value="In Progress" checked>
-            <label class="form-check-label" for="exampleRadios1">
-                In Progress
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="status" value="Complete">
-            <label class="form-check-label" for="exampleRadios2">
-                Complete
-            </label>
-        </div>
-        <div class="form-group">
-            <label>Task Desc</label>
-            <input type="text" class="form-control" name="taskdesc">
+            <label>Task ID</label>
+            <input type="text" class="form-control" name="taskid">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -10,11 +10,17 @@
 <body>
     <a href="/" class="btn btn-primary btn-lg">Home</a>
     <a href="/newtask" class="btn btn-primary btn-lg">Add New Task</a>
+    <a href ="/deletetask" class="btn btn-danger btn-lg">Delete Task</a>
+    <a href ="updatetask" class="btn btn-success btn-lg ">Update Task</a>
+    <a href ="inserttask" class="btn btn-info btn-lg">Insert Task</a>
     <table class="table table-hover table-striped">
         <thead class="thead-dark">
             <tr>
+                <td>ID</td>
                 <td>Name</td>
+                <td>Assign To</td>
                 <td>Due Date</td>
+                <td>Status</td>
                 <td>Description</td>
 
             </tr>
@@ -22,11 +28,20 @@
         <% for (var i = 0;i < taskdb.length;i++){ %>
         <tr>
             <td>
+                <%= taskdb[i].taskID %>
+            </td>
+            <td>
                 <%= taskdb[i].taskName %>
+            </td>
+            <td>
+                <%= taskdb[i].assignTo %>
             </td>
 
             <td>
                 <%= taskdb[i].taskDue %>
+            </td>
+            <td>
+                <%= taskdb[i].taskStatus %>
             </td>
 
             <td>
