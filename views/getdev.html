@@ -9,43 +9,47 @@
 
 <body>
     <a href="/" class="btn btn-primary btn-lg">Home</a>
-    <a href="/newtask" class="btn btn-primary btn-lg">Add New Task</a>
-    <a href ="/deletetask" class="btn btn-danger btn-lg">Delete Task</a>
-    <a href ="updatetask" class="btn btn-success btn-lg ">Update Task</a>
-    <a href ="inserttask" class="btn btn-info btn-lg">Insert Task</a>
     <table class="table table-hover table-striped">
         <thead class="thead-dark">
             <tr>
                 <td>ID</td>
-                <td>Name</td>
-                <td>Assign To</td>
-                <td>Due Date</td>
-                <td>Status</td>
-                <td>Description</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Level</td>
+                <td>State</td>
+                <td>Suburb</td>
+                <td>Street</td>
+                <td>Unit</td>
 
             </tr>
         </thead>
-        <% for (var i = 0;i < taskdb.length;i++){ %>
+        <% for (var i = 0;i < devdb.length;i++){ %>
         <tr>
             <td>
-                <%= taskdb[i]._id %>
+                <%= devdb[i]._id %>
             </td>
             <td>
-                <%= taskdb[i].taskName %>
+                <%= devdb[i].firstname %>
             </td>
             <td>
-                <%= taskdb[i].assignTo %>
-            </td>
-
-            <td>
-                <%= taskdb[i].taskDue %>
-            </td>
-            <td>
-                <%= taskdb[i].taskStatus %>
+                <%= devdb[i].lastname %>
             </td>
 
             <td>
-                <%= taskdb[i].taskDesc %>
+                <%= devdb[i].level %>
+            </td>
+            <td>
+                <%= devdb[i].state %>
+            </td>
+
+            <td>
+                <%= devdb[i].suburb %>
+            </td>
+            <td>
+                <%= devdb[i].street %>
+            </td>
+            <td>
+                <%= devdb[i].unit %>
             </td>
         </tr>
         <% } %>
