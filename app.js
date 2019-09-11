@@ -61,10 +61,6 @@ app.get('/insertdeveloper', function (request, response) {
 })
 
 
-app.get('/getdeveloper', function (request, response) {
-    response.render('getdev.html')
-})
-
 app.get('/listtasks', function (request, response) {
     // response.render('listtask.html', { taskdb: db });
     Task.find({}, function(err,result){
@@ -166,10 +162,13 @@ app.post('/insert', function(request,response){
     console.log(tCount);
     for (let i = 0; i < tCount; i++){
         console.log(i);
-        let id = Math.floor((Math.random() * 1000) + 1);
+        //let id = Math.floor((Math.random() * 1000) + 1);
         task = {
-            taskID: id,
-            taskName: taskDetails.taskname
+            taskID: new mongoose.Schema.ObjectId(),
+            taskName: taskDetails.taskname,
+            taskDue: new Date(taskDetails.taskdue),
+            taskStatus: taskDetails.status,
+            taskDesc: taskDetails.taskdesc
         }
         taskList.push(task);
     }

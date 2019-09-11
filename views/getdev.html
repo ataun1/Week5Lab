@@ -29,27 +29,27 @@
                 <%= devdb[i]._id %>
             </td>
             <td>
-                <%= devdb[i].firstname %>
+                <%= devdb[i].name.firstname %>
             </td>
             <td>
-                <%= devdb[i].lastname %>
+                <%= devdb[i].name.lastname %>
             </td>
 
             <td>
                 <%= devdb[i].level %>
             </td>
             <td>
-                <%= devdb[i].state %>
+                <%= devdb[i].address.state %>
             </td>
 
             <td>
-                <%= devdb[i].suburb %>
+                <%= devdb[i].address.suburb %>
             </td>
             <td>
-                <%= devdb[i].street %>
+                <%= devdb[i].address.street %>
             </td>
             <td>
-                <%= devdb[i].unit %>
+                <%= devdb[i].address.unit %>
             </td>
         </tr>
         <% } %>
